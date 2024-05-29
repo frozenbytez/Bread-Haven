@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Bread - Bread Haven</title>
+    <link rel="stylesheet" href="/Bread Haven/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../pictures/Bread Haven .png" alt="Bread Haven Logo">
+                    <h1>Bread Haven</h1>
+                </a>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="types.html">Types of Bread</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="types" class="content-section">
+        <div class="container">
+            <h2>Types of Bread</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search bread types...">
+            </div>
+            <div class="bread-grid" id="breadGrid">
+                
+            </div>
+        </div>
+        <p class="coming-soon">More bread recipes coming soon...</p>
+    </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bread Haven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const breadTypes = [
+            { name: 'Sourdough', image: '../pictures/sourdough.jpg', description: 'Discover the unique tangy flavor of sourdough bread.' },
+            { name: 'Baguette', image: '../pictures/baguette.jpg', description: 'Experience the classic French baguette with a crispy crust.' },
+            { name: 'Whole Wheat', image: '../pictures/wholewheat.jpg', description: 'Enjoy the wholesome goodness of whole wheat bread.' },
+            { name: 'Rye Bread', image: '../pictures/rye.jpg', description: 'Try the distinct, robust flavor of rye bread.' },
+            { name: 'Brioche', image: '../pictures/brioche.jpg', description: 'Indulge in the rich, buttery taste of brioche.' },
+            { name: 'Ciabatta', image: '../pictures/ciabatta.jpg', description: 'Savor the chewy texture and rustic flavor of ciabatta bread.' },
+            { name: 'Focaccia', image: '../pictures/focaccia.jpg', description: 'Enjoy the savory and herb-infused taste of focaccia bread.' },
+            { name: 'Naan', image: '../pictures/naan.jpg', description: 'Discover the soft and fluffy texture of traditional naan bread.' }
+        ];
+
+        const breadGrid = document.getElementById('breadGrid');
+        const searchInput = document.getElementById('searchInput');
+
+        function renderBreadTypes(breadTypes) {
+            breadGrid.innerHTML = '';
+            breadTypes.forEach(bread => {
+                const breadDiv = document.createElement('div');
+                breadDiv.classList.add('bread');
+                breadDiv.innerHTML = `
+                    <a href="${bread.name.toLowerCase().replace(' ', '')}.html">
+                        <img src="${bread.image}" alt="${bread.name}">
+                        <h3>${bread.name}</h3>
+                        <p>${bread.description}</p>
+                    </a>
+                `;
+                breadGrid.appendChild(breadDiv);
+            });
+        }
+
+        function filterBreadTypes(searchTerm) {
+            const filteredBreadTypes = breadTypes.filter(bread =>
+                bread.name.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+            renderBreadTypes(filteredBreadTypes);
+        }
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.trim();
+            if (searchTerm === '') {
+                renderBreadTypes(breadTypes);
+            } else {
+                filterBreadTypes(searchTerm);
+            }
+        });
+
+        renderBreadTypes(breadTypes);
+    </script>
+</body>
+</html>

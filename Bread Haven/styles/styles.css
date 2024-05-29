@@ -1,0 +1,266 @@
+
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5e9d9;
+    color: #4d3319;
+}
+
+header {
+    background-color: #d7b899;
+    color: #4d3319;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 80px;
+    margin-right: 10px;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #4d3319;
+}
+
+#home .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home .home-content .logo img {
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #4d3319;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #8c6f4f;
+}
+
+.content-section {
+    padding: 60px 0;
+    background-color: rgba(245, 233, 217, 0.8);
+    margin: 40px 0;
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.bread-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.bread {
+    background-color: rgba(215, 184, 153, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.bread:hover {
+    transform: scale(1.05);
+}
+
+.bread img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.bread h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.bread p {
+    font-size: 16px;
+}
+
+footer {
+    background-color: #d7b899;
+    color: #4d3319;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1000;
+}
+
+#home h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+#home p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#bread-detail img {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+#bread-detail ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#bread-detail ul li {
+    margin-bottom: 10px;
+}
+
+#bread-detail h3 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+#bread-detail p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #d7b899;
+    color: #4d3319;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c9a67d;
+}
+
+.bread-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bread-details img {
+    max-width: 400px;
+    margin-right: 40px;
+    border-radius: 8px;
+}
+
+.video-instructions {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.video-container {
+    margin-bottom: 20px;
+}
+
+.instructions {
+    text-align: left;
+}
+
+.instructions h3 {
+    margin-top: 0;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #4d3319;
+}
+
+header .logo img {
+    height: 80px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    header .logo img {
+        height: 60px;
+    }
+
+    header .logo h1 {
+        font-size: 20px;
+    }
+}
